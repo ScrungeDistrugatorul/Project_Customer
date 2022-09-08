@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Event
+  - Right_Choice
   layers:
   - Default
   - TransparentFX

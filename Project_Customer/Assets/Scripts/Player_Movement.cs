@@ -65,4 +65,13 @@ public class Player_Movement : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="Event")
+        {
+            walkingSpeed = 0f;
+            Debug.Log("lolloo");
+            other.gameObject.SetActive(false);
+        }
+    }
 }
