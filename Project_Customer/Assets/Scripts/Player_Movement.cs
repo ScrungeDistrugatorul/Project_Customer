@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player_Movement : MonoBehaviour
@@ -70,8 +71,11 @@ public class Player_Movement : MonoBehaviour
         if(other.gameObject.tag=="Event")
         {
             walkingSpeed = 0f;
-            Debug.Log("lolloo");
             other.gameObject.SetActive(false);
+        }
+        if(other.gameObject.tag=="Death_Zone")
+        {
+            SceneManager.LoadScene("Main_Scene");
         }
     }
 }

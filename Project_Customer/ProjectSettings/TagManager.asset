@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Event
   - Right_Choice
+  - Death_Zone
   layers:
   - Default
   - TransparentFX
