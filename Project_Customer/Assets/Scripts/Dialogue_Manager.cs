@@ -10,6 +10,8 @@ public class Dialogue_Manager : MonoBehaviour
 
     public Animator animator;
 
+    private bool playerName;
+
     private Queue<string> storyText;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class Dialogue_Manager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpened", true);
-        nameText.text = dialogue.name;
+        playerName = false;
         storyText.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -28,11 +30,21 @@ public class Dialogue_Manager : MonoBehaviour
             storyText.Enqueue(sentence);
 
         }
-        ShowNextSentence();
+        ShowNextSentence(dialogue);
     }
 
-    public void ShowNextSentence()
+    public void ShowNextSentence(Dialogue dialogue)
     {
+        if(playerName)
+        {
+            nameText.text = dialogue.swapName;
+            playerName = false;
+        }
+        else
+        {
+            nameText.text = dialogue.name;
+            playerName = true;
+        }
         if (storyText.Count == 0)
         {
             EndDialogue();
@@ -46,5 +58,6 @@ public class Dialogue_Manager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpened", false);
+        FindObjectOfType<Player_Movement>().walkingSpeed=7.5f;
     }
 }

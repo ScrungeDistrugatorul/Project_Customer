@@ -10,10 +10,11 @@ public class Dialogue_Trigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<Dialogue_Manager>().StartDialogue(dialogue);
+        FindObjectOfType<Player_Movement>().walkingSpeed = 0f;
     }
     private void NextSentence()
     {
-        FindObjectOfType<Dialogue_Manager>().ShowNextSentence();
+        FindObjectOfType<Dialogue_Manager>().ShowNextSentence(dialogue);
     }
 
     void Update()
