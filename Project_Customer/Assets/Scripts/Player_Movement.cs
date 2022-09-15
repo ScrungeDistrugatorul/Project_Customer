@@ -13,12 +13,20 @@ public class Player_Movement : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
 
+    public float timeLeft = 2f;
+
+    public GameObject pistol;
+
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
     [HideInInspector]
     public bool canMove = true;
+    [HideInInspector]
+    public bool hasPistol = false;
+    [HideInInspector]
+    public bool gunLoaded = true;
 
     void Start()
     {
@@ -28,13 +36,27 @@ public class Player_Movement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    private void FixedUpdate()
+    {
+        int layerMask = 0 << 2;
+        layerMask = ~layerMask;
 
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore))
+        {
+           //Debug.Log(hit.collider.gameObject.tag);
+            if (hit.collider.gameObject.tag == "NPC" && hasPistol == true)
+            {
+                SceneManager.LoadScene("Main_Scene");
+            }
+        }
+    }
     void Update()
     {
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
-        // Press Left Shift to run
+
         float curSpeedX = canMove ? walkingSpeed * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? walkingSpeed * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
@@ -65,17 +87,44 @@ public class Player_Movement : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
+
+        if (pistol.activeSelf == true)
+        {
+            Timer();
+            if (timeLeft <= 0)
+            {
+                hasPistol = true;
+            }
+        }
+        else
+        {
+            hasPistol = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && gunLoaded && hasPistol)
+        {
+            gunLoaded = false;
+            Debug.Log(gunLoaded);
+        }
+        else if (Input.GetKeyDown(KeyCode.Q) && !gunLoaded && hasPistol)
+        {
+            gunLoaded = true;
+            Debug.Log(gunLoaded);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="Event")
-        {
-            walkingSpeed = 0f;
-            other.gameObject.SetActive(false);
-        }
-        if(other.gameObject.tag=="Death_Zone")
+        if (other.gameObject.tag == "Death_Zone")
         {
             SceneManager.LoadScene("Main_Scene");
+        }
+    }
+
+    private void Timer()
+    {
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
         }
     }
 }

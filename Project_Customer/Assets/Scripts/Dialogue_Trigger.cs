@@ -6,10 +6,18 @@ public class Dialogue_Trigger : MonoBehaviour
 {
     public Dialogue dialogue;
     private GameObject currentNPC;
-    private bool triggering;
+    public bool triggering;
+
+    public bool cutscene = false;
     public void TriggerDialogue()
     {
         FindObjectOfType<Dialogue_Manager>().StartDialogue(dialogue);
+        FindObjectOfType<Player_Movement>().walkingSpeed = 0f;
+    }
+
+    public void TriggerCutsceneDialogue()
+    {
+        FindObjectOfType<Dialogue_Manager>().StartCutscene(dialogue);
         FindObjectOfType<Player_Movement>().walkingSpeed = 0f;
     }
     private void NextSentence()
@@ -17,24 +25,38 @@ public class Dialogue_Trigger : MonoBehaviour
         FindObjectOfType<Dialogue_Manager>().ShowNextSentence(dialogue);
     }
 
+
     void Update()
     {
         if (triggering)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                TriggerDialogue();
+                if (cutscene)
+                {
+                    TriggerCutsceneDialogue();
+                }
+                else
+                {
+                    TriggerDialogue();
+                }
+               
             }
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && FindObjectOfType<Player_Movement>().walkingSpeed == 0f)
             {
                 NextSentence();
-            }    
+            }
         }
     }
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            if (this.gameObject.tag == "Cutscene")
+            {
+                cutscene = true;
+                Debug.Log(cutscene);
+            }
             triggering = true;
             currentNPC = other.gameObject;
         }
@@ -44,6 +66,10 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if (this.gameObject.tag == "Cutscene")
+            {
+                cutscene = false;
+            }
             triggering = false;
             currentNPC = null;
         }

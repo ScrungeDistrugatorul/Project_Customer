@@ -7,6 +7,11 @@ TagManager:
   - Event
   - Right_Choice
   - Death_Zone
+  - Cutscene
+  - Pistol
+  - NPC
+  - Table
+  - GunBox
   layers:
   - Default
   - TransparentFX

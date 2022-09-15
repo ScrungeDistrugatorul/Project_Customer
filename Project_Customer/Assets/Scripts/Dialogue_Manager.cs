@@ -9,8 +9,11 @@ public class Dialogue_Manager : MonoBehaviour
     public Text dialogueText;
 
     public Animator animator;
+    public Animator cutscene;
 
     private bool playerName;
+
+    public GameObject pistol;
 
     private Queue<string> storyText;
     // Start is called before the first frame update
@@ -33,9 +36,24 @@ public class Dialogue_Manager : MonoBehaviour
         ShowNextSentence(dialogue);
     }
 
+    public void StartCutscene(Dialogue dialogue)
+    {
+        cutscene.SetBool("IsCutscene", true);
+        animator.SetBool("IsOpened", true);
+        playerName = false;
+        storyText.Clear();
+
+        foreach (string sentence in dialogue.sentences)
+        {
+            storyText.Enqueue(sentence);
+
+        }
+        ShowNextSentence(dialogue);
+    }
+
     public void ShowNextSentence(Dialogue dialogue)
     {
-        if(playerName)
+        if (playerName)
         {
             nameText.text = dialogue.swapName;
             playerName = false;
@@ -52,12 +70,21 @@ public class Dialogue_Manager : MonoBehaviour
         }
         string sentence = storyText.Dequeue();
         dialogueText.text = sentence;
-        Debug.Log("show");
+        //Debug.Log("show");
     }
 
     void EndDialogue()
     {
+        Debug.Log("End");
+        if (GameObject.Find("Brother").GetComponentInChildren<Dialogue_Trigger>().cutscene)
+        {
+
+            GameObject.Find("Brother").transform.SetPositionAndRotation(new Vector3(2.9f, 1.5f, -12.7f), transform.rotation);
+            pistol.SetActive(true);
+            Debug.Log("happens");
+        }
         animator.SetBool("IsOpened", false);
-        FindObjectOfType<Player_Movement>().walkingSpeed=7.5f;
+        cutscene.SetBool("IsCutscene", false);
+        FindObjectOfType<Player_Movement>().walkingSpeed = 7.5f;
     }
 }
