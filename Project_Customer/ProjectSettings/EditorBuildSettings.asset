@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start_Dialogue.unity
+    guid: 99c3d9a63920ac047b94f8b94aee5145
+  - enabled: 1
     path: Assets/Scenes/Main_Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Retry_Scene.unity
+    guid: 3c9dad43e354bd045820f0149d277b62
+  - enabled: 1
+    path: Assets/Scenes/Outside_Retry_Scene.unity
+    guid: 9f41c6fc4c2c51041a662eea53c1ed8a
   m_configObjects: {}
