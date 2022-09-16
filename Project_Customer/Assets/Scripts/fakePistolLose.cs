@@ -1,20 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class fakePistolLose : MonoBehaviour
+public class FakePistolLose : MonoBehaviour
 {
     public GameObject player;
-    private Player_Movement playerMovement;
+    private PlayerMovement _playerMovement;
 
     private void Start()
     {
-        playerMovement = player.GetComponent<Player_Movement>();
+        _playerMovement = player.GetComponent<PlayerMovement>();
     }
     private void OnBecameInvisible()
     {
-        if (this.gameObject.activeSelf && playerMovement.gunLoaded)
+        if (gameObject.activeSelf && _playerMovement.gunLoaded)
         {
             SceneManager.LoadScene("Retry_Scene");
         }

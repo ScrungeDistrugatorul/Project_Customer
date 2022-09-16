@@ -583,13 +583,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198422899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34467f1b966a344781089cb5c271d46, type: 3}
+  m_Script: {fileID: 11500000, guid: e534bdf63cbb2ee4c8f83f2db00a2101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text1: {fileID: 972632290}
-  Text2: {fileID: 1749027232}
-  Text3: {fileID: 1661801894}
-  Text4: {fileID: 1939654966}
+  dialogue:
+    name: Dad
+    swapName: Kid
+    sentences:
+    - What a nice sunny day! Shall we go to the shooting range?
+    - "Yes Dad! Please, let\u2019s go there!\r\n"
+    - "Okay, okay... but remember, you\u2019re very young to even hold a gun. Guns
+      are not for kids; guns are NOT toy\r"
+    - But once there, I will teach you how to use them safely
+  triggering: 0
+  cutscene: 0
 --- !u!1 &1423369839
 GameObject:
   m_ObjectHideFlags: 0
