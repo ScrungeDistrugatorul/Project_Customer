@@ -4,9 +4,11 @@ using UnityEngine.SceneManagement;
 public class TableSwitch : MonoBehaviour
 {
     public GameObject player;
-    public GameObject fakePistol;
-    public GameObject ammoBox;
     private PlayerMovement _playerMovement;
+    
+    public GameObject fakePistol;
+    
+    public GameObject ammoBox;
     private AmmoSwitch _ammoSwitch;
     private void Start()
     {
@@ -17,7 +19,7 @@ public class TableSwitch : MonoBehaviour
     {
         if (gameObject.CompareTag("GunBox") && Input.GetKeyDown(KeyCode.E) && _ammoSwitch.hasAmmo)
         {
-            SceneManager.LoadScene("Start_Dialogue");
+            SceneManager.LoadScene("GameWin");
         }
         
         if(Input.GetKeyDown(KeyCode.E) && _playerMovement.hasPistol)

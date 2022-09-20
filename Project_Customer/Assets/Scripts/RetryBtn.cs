@@ -27,6 +27,11 @@ public class RetryBtn : MonoBehaviour
     {
         SceneManager.LoadScene("Main_Scene");
     }
+
+    public void Win()
+    {
+        SceneManager.LoadScene("Start_Dialogue");
+    }
     void Timer()
     {
         if (timeLeft > 0)

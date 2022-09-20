@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(hit.collider.gameObject.tag);
         if (hit.collider.gameObject.CompareTag("NPC") && hasPistol && npcIsHit)
         {
-            SceneManager.LoadScene("Main_Scene");
+            SceneManager.LoadScene("AimRetryScene");
         }
     }
     void Update()
