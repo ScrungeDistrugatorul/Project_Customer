@@ -9,6 +9,8 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector]
     public bool cutscene;
 
+    private bool _mainCharTalk;
+
     public AudioSource audioSource;
     public AudioClip npcTalk;
     public AudioClip mainCharacterTalk;
@@ -29,9 +31,10 @@ public class DialogueTrigger : MonoBehaviour
     public void NextSentence()
     {
         FindObjectOfType<DialogueManager>().ShowNextSentence(dialogue);
-        if (dialogue.swapName=="Dad:")
+        if (dialogue.swapName=="Dad:" && !_mainCharTalk)
         {
             audioSource.PlayOneShot(mainCharacterTalk,Volume);
+            _mainCharTalk=true;
         }
         else
         {
@@ -48,6 +51,7 @@ public class DialogueTrigger : MonoBehaviour
             if (cutscene)
             {
                 TriggerCutsceneDialogue();
+                FindObjectOfType<DialogueManager>().GetComponent<AudioPlay>().enabled = false;
             }
             else
             {
