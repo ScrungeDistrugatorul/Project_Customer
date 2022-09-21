@@ -244,7 +244,8 @@ MonoBehaviour:
   triggering: 0
   cutscene: 0
   audioSource: {fileID: 25406194}
-  npcTalk: {fileID: 0}
+  npcTalk: {fileID: 8300000, guid: 41d321705f414e9448a7848ec0ea9f82, type: 3}
+  mainCharacterTalk: {fileID: 8300000, guid: 5b58ebf941e0e184d99ddd936f1b7c30, type: 3}
 --- !u!82 &25406194
 AudioSource:
   m_ObjectHideFlags: 0
@@ -257,7 +258,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2971,6 +2972,7 @@ MonoBehaviour:
   cutscene: 0
   audioSource: {fileID: 0}
   npcTalk: {fileID: 0}
+  mainCharacterTalk: {fileID: 8300000, guid: 5b58ebf941e0e184d99ddd936f1b7c30, type: 3}
 --- !u!1 &521839746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1610193434627561818, guid: c4c745dcb1d6c6f44b6910c023d25392,
@@ -7021,7 +7023,8 @@ MonoBehaviour:
   triggering: 0
   cutscene: 0
   audioSource: {fileID: 1650014657}
-  npcTalk: {fileID: 0}
+  npcTalk: {fileID: 8300000, guid: 5b58ebf941e0e184d99ddd936f1b7c30, type: 3}
+  mainCharacterTalk: {fileID: 8300000, guid: 5b58ebf941e0e184d99ddd936f1b7c30, type: 3}
 --- !u!136 &1650014654
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7098,7 +7101,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

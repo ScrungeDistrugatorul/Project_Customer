@@ -11,6 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip npcTalk;
+    public AudioClip mainCharacterTalk;
     private const float Volume = 0.2f;
 
     public void TriggerDialogue()
@@ -28,7 +29,14 @@ public class DialogueTrigger : MonoBehaviour
     public void NextSentence()
     {
         FindObjectOfType<DialogueManager>().ShowNextSentence(dialogue);
-        audioSource.PlayOneShot(npcTalk,Volume);
+        if (dialogue.swapName=="Dad:")
+        {
+            audioSource.PlayOneShot(mainCharacterTalk,Volume);
+        }
+        else
+        {
+            audioSource.PlayOneShot(npcTalk,Volume);
+        }
     }
 
 
