@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool canEquipPistol;
     private bool _timer;
-    private float timeLeft = 1f;
+    private float _timeLeft = 1f;
     
     private static readonly int IsOpened = Animator.StringToHash("IsOpened");
     private static readonly int IsCutscene = Animator.StringToHash("IsCutscene");
@@ -99,7 +99,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End");
         if (GameObject.Find("Brother").GetComponentInChildren<DialogueTrigger>().cutscene)
         {
-            GameObject.Find("Brother").transform.SetPositionAndRotation(new Vector3(-13.06f,1.48f,33.54f), transform.rotation);
+            GameObject.Find("Brother").transform.SetPositionAndRotation(new Vector3(-12.03f,0.44f,31.76f), Quaternion.Euler(new Vector3(0,180,0)));
             pistol.SetActive(true);
             Debug.Log("happens");
         }
@@ -120,7 +120,7 @@ public class DialogueManager : MonoBehaviour
         if(_timer)
         {
             Timer();
-            if (timeLeft < 0)
+            if (_timeLeft < 0)
             {
                 canEquipPistol = true;
             }
@@ -129,9 +129,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Timer()
     {
-        if (timeLeft > 0)
+        if (_timeLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
+            _timeLeft -= Time.deltaTime;
         }
     }
 }

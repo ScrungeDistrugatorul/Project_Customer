@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="910f65b5-d102-49c4-8fb2-4aa1295cb6b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-0_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-0_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-0_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-1_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-1_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-1_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-1_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-1_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-1_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-2_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-2_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-2_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-2_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-2_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-2_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-3_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-3_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-3_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-3_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-3_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-3_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-4_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-4_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-4_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-4_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-4_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-4_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-5_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-5_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-5_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-5_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-5_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-5_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-6_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-6_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-6_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-6_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-6_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-6_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-7_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-7_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-7_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-7_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-7_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-7_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-8_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-8_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-8_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-8_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-8_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-8_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-9_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-9_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-9_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-9_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-9_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/Lightmap-9_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathSample/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathScene.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/DeathScene.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/GunBoxRetry.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/GunBoxRetry.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/Main_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/Main_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/Main_Scene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/Main_Scene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/Start_Dialogue.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/Assets/Scenes/Start_Dialogue.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scripts/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/Assets/Scripts/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/Assets/Scripts/fakePistolLose.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/Assets/Scripts/fakePistolLose.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Customer/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Customer/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F8h0lnBnGBD82Qf6SwQIZN3EYj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="910f65b5-d102-49c4-8fb2-4aa1295cb6b1" name="Changes" comment="" />
+      <created>1663879399766</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663879399766</updated>
+      <workItem from="1663879406512" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

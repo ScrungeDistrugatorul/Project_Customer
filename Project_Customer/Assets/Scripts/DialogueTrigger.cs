@@ -45,6 +45,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
+        if (FindObjectOfType<PlayerMovement>().hasPistol) return;
         if (!triggering) return;
         if (Input.GetKeyDown(KeyCode.E))
         {

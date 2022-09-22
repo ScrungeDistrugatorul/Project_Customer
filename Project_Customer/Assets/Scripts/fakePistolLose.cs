@@ -16,11 +16,7 @@ public class fakePistolLose : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        if (gameObject.activeSelf && _playerMovement.gunLoaded && !_ammoSwitch.hasAmmo)
-        {
-            SceneManager.LoadScene("Retry_Scene");
-        }
-        else if (gameObject.activeSelf && !_playerMovement.gunLoaded && !_ammoSwitch.hasAmmo)
+        if (gameObject.activeSelf && !_ammoSwitch.hasAmmo)
         {
             SceneManager.LoadScene("Retry_Scene");
         }
