@@ -22,13 +22,13 @@ public class TableSwitch : MonoBehaviour
             SceneManager.LoadScene("GameWin");
         }
         
-        if(Input.GetKeyDown(KeyCode.E) && _playerMovement.hasPistol)
+        if(Input.GetKeyDown(KeyCode.E) && _playerMovement.hasPistol && FindObjectOfType<DialogueManager>().GetComponent<DialogueManager>().canEquipPistol)
         {
             _playerMovement.pistol.SetActive(false);
             fakePistol.SetActive(true);
             _playerMovement.hasPistol = false;
         }
-        else if(Input.GetKeyDown(KeyCode.E) && !_playerMovement.hasPistol)
+        else if(Input.GetKeyDown(KeyCode.E) && !_playerMovement.hasPistol && FindObjectOfType<DialogueManager>().GetComponent<DialogueManager>().canEquipPistol)
         {
             _playerMovement.pistol.SetActive(true);
             fakePistol.SetActive(false);

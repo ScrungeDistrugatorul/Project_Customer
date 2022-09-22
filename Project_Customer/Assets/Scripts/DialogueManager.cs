@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,10 @@ public class DialogueManager : MonoBehaviour
     public Font mainFont;
 
     private Queue<string> _storyText;
+
+    public bool canEquipPistol;
+    private bool _timer;
+    private float timeLeft = 1f;
     
     private static readonly int IsOpened = Animator.StringToHash("IsOpened");
     private static readonly int IsCutscene = Animator.StringToHash("IsCutscene");
@@ -36,6 +41,7 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool(IsOpened, true);
         _playerName = false;
         _storyText.Clear();
+       
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -51,6 +57,7 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool(IsOpened, true);
         _playerName = false;
         _storyText.Clear();
+        _timer = true;
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -105,6 +112,26 @@ public class DialogueManager : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Start_Dialogue"))
         {
             SceneManager.LoadScene("Main_Scene");
+        }
+    }
+
+    private void Update()
+    {
+        if(_timer)
+        {
+            Timer();
+            if (timeLeft < 0)
+            {
+                canEquipPistol = true;
+            }
+        }
+    }
+
+    private void Timer()
+    {
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
         }
     }
 }

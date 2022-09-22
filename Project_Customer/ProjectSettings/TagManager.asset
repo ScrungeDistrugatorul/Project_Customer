@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - Table
   - GunBox
+  - Interactable
   layers:
   - Default
   - TransparentFX

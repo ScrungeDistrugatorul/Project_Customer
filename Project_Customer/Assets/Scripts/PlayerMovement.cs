@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
@@ -14,8 +16,13 @@ public class PlayerMovement : MonoBehaviour
     public float timeLeft = 2f;
 
     public GameObject pistol;
+    public GameObject wayUI;
+    public GameObject winWayUI;
     
     public AudioSource audioSource;
+    public AudioSource soundEffect;
+    public AudioClip reloadSound;
+    private const float Volume=0.2f;
 
     public GameObject ammoSwitch;
     private AmmoSwitch _ammoSwitch;
@@ -32,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
     public bool gunLoaded = true;
     [HideInInspector]
     public bool npcIsHit;
+    [HideInInspector]
+    public bool canReload;
 
     void Start()
     {
@@ -94,12 +103,15 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
 
-        if (pistol.activeSelf)
+        if (pistol.activeSelf && FindObjectOfType<DialogueManager>().GetComponent<DialogueManager>().canEquipPistol)
         {
+            wayUI.SetActive(false);
             Timer();
             if (timeLeft <= 0)
             {
                 hasPistol = true;
+                canReload = true;
+                winWayUI.SetActive(true);
             }
         }
         else
@@ -107,8 +119,11 @@ public class PlayerMovement : MonoBehaviour
             hasPistol = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && gunLoaded && hasPistol)
+        if (Input.GetKeyDown(KeyCode.Q) && gunLoaded && hasPistol && canReload)
         {
+            timeLeft = 1.5f;
+            canReload = false;
+            soundEffect.PlayOneShot(reloadSound,Volume);
             if (_ammoSwitch.hasAmmo)
             {
                 _ammoSwitch.emptyMagazine.SetActive(true);
@@ -120,25 +135,35 @@ public class PlayerMovement : MonoBehaviour
             gunLoaded = false;
             Debug.Log(gunLoaded);
         }
-        else if (Input.GetKeyDown(KeyCode.Q) && !gunLoaded && hasPistol)
+        else if (Input.GetKeyDown(KeyCode.Q) && !gunLoaded && hasPistol && canReload)
         {
+            timeLeft = 1.5f;
+            canReload = false;
+            soundEffect.PlayOneShot(reloadSound,Volume);
             if (_ammoSwitch.hasAmmo)
             {
                 _ammoSwitch.emptyMagazine.SetActive(false);
+                soundEffect.PlayOneShot(reloadSound,Volume);
             }
             else
             {
                 _ammoSwitch.fullMagazine.SetActive(false);
+                soundEffect.PlayOneShot(reloadSound,Volume);
             }
             gunLoaded = true;
             Debug.Log(gunLoaded);
+        }
+
+        if (Input.GetMouseButtonDown(0) && hasPistol)
+        {
+            SceneManager.LoadScene("ShootRetry");
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Death_Zone"))
         {
-            SceneManager.LoadScene("Main_Scene");
+            SceneManager.LoadScene("DeathZoneRetry");
         }
     }
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FakePistolLose : MonoBehaviour
+public class fakePistolLose : MonoBehaviour
 {
     public GameObject player;
     private PlayerMovement _playerMovement;
@@ -16,13 +16,13 @@ public class FakePistolLose : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        if (gameObject.activeSelf && _playerMovement.gunLoaded)
+        if (gameObject.activeSelf && _playerMovement.gunLoaded && !_ammoSwitch.hasAmmo)
         {
             SceneManager.LoadScene("Retry_Scene");
         }
-        else if (gameObject.activeSelf && _playerMovement.gunLoaded == false && _ammoSwitch.hasAmmo == false)
+        else if (gameObject.activeSelf && !_playerMovement.gunLoaded && !_ammoSwitch.hasAmmo)
         {
-            SceneManager.LoadScene("UnloadedRetryScene");
+            SceneManager.LoadScene("Retry_Scene");
         }
     }
 }
